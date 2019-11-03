@@ -25,11 +25,9 @@ pub fn main() anyerror!void {
     defer args.available.deinit();
     try args.parse(a);
 
-    if (true) {
-        warn("args: {}\n", args.values);
-        args.show();
-        warn("name provided {}\n", args.available.get("name").?.value);
-    }
+    warn("args: {}\n", args.values);
+    args.show();
+    warn("name provided {}\n", args.available.get("name").?.value);
 }
 
 ```

@@ -21,9 +21,7 @@ pub fn main() anyerror!void {
     // @Cleanup free std.mem.dupe'd slices
     try args.parse(a);
 
-    if (true) {
-        warn("args: {}\n", args.values);
-        args.show();
-        warn("name provided {}\n", args.available.get("name").?.value);
-    }
+    warn("args: {}\n", args.values);
+    args.show();
+    warn("name provided {}\n", args.available.get("name").?.value);
 }
